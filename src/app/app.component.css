@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+}
+header {
+    background: #005E92;    
+    z-index: 99;
+    position: relative;
+}
+h1 {
+    text-align: left;    
+    padding: 2rem 1rem;
+    color: white;
+    font-weight: bold;
+    margin-top: 0;
+    font-size: 2.5em;
+    
+}
+#blankSheet {
+    position: fixed;
+    width: 100%;
+    height: 150%;
+    z-index: 100;
+    top: -100px;
+    background-color: rgba(200,200,200,0.5);
+}
+#loadingContainer {    
+    position: fixed;
+    top: 15em;
+    z-index: 199;
+    margin-left: 50%;
+}
+#loading {
+    text-align: left;    
+    margin-left: -50%;
+    margin-right: 50%;
+    background-color: white;
+    padding: 1em;
+    box-shadow: 3px 3px 6px black;
+    border-radius: 5px;    
+}
+nav {
+    clear: both;
+    padding-left: 1rem;
+    margin-top: 20px;
+    width: 100%;    
+}
+nav:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+nav .tab-nav {
+    float: left; 
+}
+nav .tab-nav span {   
+    display: block;
+    font-size: 15px;
+    height: 36px;
+    line-height: 35px;
+    margin-right: 3px;
+    border: solid white 1px;
+    border-bottom: 0px !important;
+    cursor: pointer;
+    padding: 0;
+    border-radius: 3px 3px 0px 0px;
+    background: #BBDDFF;
+    color: black;
+}
+nav .tab-nav span a {
+    color: inherit;
+    font-weight: bold;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    padding: 0 20px;
+}
+nav .tab-nav span a:link {
+    text-decoration: none;
+}
+nav .tab-nav span a:visited {
+    text-decoration: none;
+}
+nav .tab-nav span a:hover {
+    text-decoration: none;
+    color: white;
+    background: #005E92;
+    border-color: white;
+}
+nav .tab-nav span a:active {
+    text-decoration: none;
+}
+nav .tab-nav span.current {
+    background: white; 
+    border-color: #005E92;
+}
+nav .tab-nav span.current:after {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: white;
+    top: -1px;
+    content: "";
+}
+
+main {
+    clear: both;
+    padding: 2em;
+    border-top: solid black 1px;
+    position: relative;
+    z-index: 1;
+}

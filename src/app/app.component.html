@@ -1,0 +1,31 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<header style="text-align:center">
+
+  <h1>{{title}}</h1>
+  <div *ngIf="loading"> 
+    <div id="blankSheet"></div>
+    <div id="loadingContainer">
+      <div id="loading">
+        <span><img src="../assets/images/ajax-loader.gif" alt="Loading" /></span>
+        <span class="message">please wait...</span>
+    </div>
+  </div>
+  </div>   
+  <nav>
+    <div class="tab-nav">
+        <span [ngClass]="currentTab == 1 ? 'current' : ''">
+          <a (click)="setCurrentTab(1)" routerLink="/comp1" routerLinkActive="active">Component 1</a>
+        </span>
+    </div>
+    <div class="tab-nav">
+        <span [ngClass]="currentTab == 2 ? 'current' : ''">
+          <a (click)="setCurrentTab(2)" routerLink="/comp2" routerLinkActive="active">Component 2</a>
+        </span>
+    </div>
+  </nav>
+</header>
+<main>
+  <router-outlet></router-outlet>
+</main>
+
+
